@@ -1,0 +1,126 @@
+
+////////////////////////////////////////////////////////////////////////////////////
+
+//
+// CATEGORY
+//
+
+### GET ALL CATEGORY
+GET http://localhost:10000/categories
+
+### GET CATEGORY BY ID
+GET http://localhost:10000/category/66f1ab8008c7be64668bd77a
+
+### POST CATEGORY
+POST http://localhost:10000/category
+Content-Type: application/json
+
+{
+  "category_name": "bone"
+}
+
+### DELETE CATEGORY
+DELETE http://localhost:10000/category/66f1a97a08c7be64668bd778
+
+### UPDATE CATEGORY
+PUT http://localhost:10000/category/66f1ab8008c7be64668bd77a
+Content-Type: application/json
+
+{
+  "category_name": "Skeleton"
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////
+
+///
+/// Species
+/// 
+
+### GET ALL SPECIES
+GET http://localhost:10000/species
+
+### GET SPECIES BY ID
+GET http://localhost:10000/species/642d1e873e9c108f66a50009
+
+### POST SPECIES
+POST http://localhost:10000/species
+Content-Type: application/json
+
+{
+  "species_name": "bunny",
+  "category": "66f1ab8008c7be64668bd77a",
+  "image": "placeholder.jpg",
+  "location": {
+    "type": "Point",
+    "coordinates": [22.34, 56.78]
+  }
+
+}
+
+
+### DELETE SPECIES
+DELETE http://localhost:10000/species/66f1b2541700b605067765c6
+
+### UPDATE SPECIES
+PUT http://localhost:10000/species/66f1b3da1700b605067765c9
+Content-Type: application/json
+
+{
+  "species_name": "rabbit",
+  "category": "66f1ab8008c7be64668bd77a",
+  "image": "placeholder.jpg",
+  "location": {
+    "type": "Point",
+    "coordinates": [12.34, 56.78]
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////////
+
+///
+/// Animals
+///
+
+### GET ALL ANIMALS
+GET http://localhost:10000/animals
+
+### GET ANIMAL BY ID
+GET http://localhost:10000/animal/66f1b3da1700b605067765c9
+
+### POST ANIMAL
+POST http://localhost:10000/animal
+Content-Type: application/json
+
+{
+  "animal_name": "steve",
+  "species": "66f1b3da1700b605067765c9",
+  "birthdate": "2001-02-02T00:00:00.000+00:00",
+  "image": "placeholder.jpg",
+  "location": {
+    "type": "Point",
+    "coordinates": [22.34, 56.78]
+  },
+  "owner": "66f1b3da1700b605067765c9"
+}
+
+### DELETE ANIMAL
+DELETE http://localhost:10000/animal/66f1c25274fa7f051aae7264
+
+### UPDATE ANIMAL
+PUT http://localhost:10000/animal/66f1c2fe74fa7f051aae7265
+Content-Type: application/json
+
+{
+  "animal_name": "Boko",
+  "species": "66f1b3da1700b605067765c9",
+  "birthdate": "2001-02-02T00:00:00.000+00:00",
+  "image": "placeholder.jpg",
+  "location": {
+    "type": "Point",
+    "coordinates": [22.34, 56.78]
+  },
+  "owner": "66f1b3da1700b605067765c9"
+}
+
+////////////////////////////////////////////////////////////////////////////////////
